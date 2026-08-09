@@ -3,10 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#E7ECEA">
+<meta name="theme-color" content="#0F201C">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="EMG">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
 <meta name="description" content="Attivazione muscolare per esercizio in %MVIC: spalla, anca, coscia, ischiocrurali e polpaccio.">
 <title>Quanto stimola ogni esercizio — %MVIC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1160,6 +1163,14 @@ Cibulka M, Wenthe A, Boyle Z, Callier D, Schwerdt A, Jarman D, Strube MJ. <em>Va
 Nunes JP, et al. <em>Different Foot Positioning During Calf Training to Induce Portion-Specific Gastrocnemius Muscle Hypertrophy</em>. 2020. PMID 32735428.`;
 
 render();
+
+// service worker: abilita l'uso offline. Fallisce in silenzio se il file
+// viene aperto da disco (protocollo file://), dove i sw non sono ammessi.
+if("serviceWorker" in navigator && location.protocol.startsWith("http")){
+  window.addEventListener("load",()=>{
+    navigator.serviceWorker.register("sw.js").catch(()=>{});
+  });
+}
 </script>
 </body>
 </html>
