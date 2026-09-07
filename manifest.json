@@ -1,7 +1,7 @@
 {
-  "name": "Quanto stimola ogni esercizio",
-  "short_name": "EMG",
-  "description": "Attivazione muscolare per esercizio in %MVIC: spalla, anca, coscia, ischiocrurali e polpaccio.",
+  "name": "Quanta — attivazione muscolare in %MVIC",
+  "short_name": "Quanta",
+  "description": "Quanto stimola ogni esercizio: attivazione muscolare in %MVIC da studi EMG peer-reviewed. Spalla, anca, inguine, coscia, ischiocrurali, polpaccio, core e back squat.",
   "lang": "it",
   "dir": "ltr",
   "start_url": "./",
@@ -9,8 +9,12 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#E7ECEA",
-  "theme_color": "#0F201C",
-  "categories": ["medical", "health", "education"],
+  "theme_color": "#0E7C66",
+  "categories": [
+    "medical",
+    "health",
+    "education"
+  ],
   "icons": [
     {
       "src": "icon-192.png",
