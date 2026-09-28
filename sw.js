@@ -1,7 +1,7 @@
 /* Service worker: rende l'app utilizzabile senza connessione.
    Cambia CACHE a ogni aggiornamento dei file, altrimenti i telefoni
    continueranno a servire la versione vecchia dalla cache. */
-const CACHE = "emg-v16";
+const CACHE = "emg-v19";
 
 const ASSETS = [
   "./",
