@@ -18,8 +18,6 @@ Pagina singola, nessuna dipendenza, nessun build. Apri `index.html` in un browse
 
 **Continuum** — progressioni cliniche divise per distretto: spalla, quadricipite, ischiocrurali, polpaccio.
 
-**Metodo** — come ogni studio ha normalizzato, e perché alcuni studi non compaiono nei grafici.
-
 ## Le soglie
 
 La linea tratteggiata cambia significato con l'obiettivo, e compare solo dove ha senso:
@@ -51,7 +49,7 @@ Coscia — Vera-Cartagena 2026, Marshall 2020, Karst 1993
 Ischiocrurali — van den Tillaar 2017, Ferri-Caruana 2022
 Polpaccio — Mullaney 2011, Ferri-Caruana 2025, Cibulka 2017, Nunes 2020, Ugbolue 2021
 
-Riferimenti completi in fondo alla pagina. Cinque studi non compaiono nei grafici perché non normalizzano su una MVIC o perché i valori esistono solo dentro le figure: il loro contenuto è nel Continuum e nel Metodo.
+Riferimenti completi in fondo alla pagina. Cinque studi non compaiono nei grafici perché non normalizzano su una MVIC o perché i valori esistono solo dentro le figure: il loro contenuto è nel Continuum.
 
 ## File
 
@@ -85,7 +83,7 @@ I font arrivano da Google Fonts via CDN: serve connessione. Per un uso completam
 
 L'EMG stima il carico, non lo misura, e l'ampiezza del segnale non predice l'adattamento a lungo termine. Le soglie qui riportate sono una guida alla scelta e alla progressione degli esercizi, non una garanzia di sicurezza per un tessuto riparato. Nessuna di queste schede sostituisce il giudizio clinico sul singolo paziente.
 
-I dati provengono da studi su soggetti in larga maggioranza sani, spesso giovani e di un solo sesso. I limiti di ciascuno studio sono riportati nelle card del Metodo.
+I dati provengono da studi su soggetti in larga maggioranza sani, spesso giovani e di un solo sesso.
 
 ## Licenza
 

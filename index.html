@@ -147,7 +147,6 @@
   <div class="views" role="tablist">
     <button class="view" id="v-es" role="tab" aria-selected="true" data-i18n="Esercizi">Esercizi</button>
     <button class="view" id="v-pr" role="tab" aria-selected="false" data-i18n="Continuum">Continuum</button>
-    <button class="view" id="v-me" role="tab" aria-selected="false" data-i18n="Metodo">Metodo</button>
   </div>
 
   <section id="sec-es">
@@ -185,323 +184,6 @@
   </section>
 
   <section id="sec-pr" hidden></section>
-  <section id="sec-me" hidden>
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Il denominatore decide tutto</h3>
-      <div class="meta">Perché lo stesso esercizio dà numeri diversi da studio a studio</div>
-      <p style="font-size:14px;line-height:1.55;margin:0">Il %MVIC è una frazione: sopra c'è l'attivazione durante l'esercizio, sotto la contrazione massima di riferimento. Se cambia il test di normalizzazione, o la posizione dell'elettrodo, cambiano tutti i valori — anche a parità di esercizio. È la prima cosa da guardare quando due studi non concordano.</p>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Quando un dato letto da una figura può diventare una barra</h3>
-      <div class="meta">La regola che decide cosa entra nei grafici e cosa resta nel Continuum</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">Molti studi mettono i valori per singolo esercizio solo dentro le figure. Ricostruirli è possibile, ma non sempre lecito: dipende da <em>cosa</em> si ricostruisce. Tre categorie, con esiti diversi.</p>
-      <ul>
-        <li><strong>Valore letto dalla figura, grandezza riportata dagli autori</strong> — diventa una barra, ma solo se la ricostruzione si valida contro numeri scritti nel testo dell'articolo. Le schede in newton dell'inguine riproducono tutte e cinque le affermazioni di ranking e tier del testo di Collings; quelle di attivazione riproducono il 67–87% e il 50–78% dei due Copenhagen; le schede (HD) degli ischiocrurali riproducono i range 17–54% e 32–83% di Hegyi, e i suoi valori puntuali per stacco rumeno e carrucola conica</li>
-        <li><strong>Valore calcolato esattamente da numeri che gli autori riportano</strong> — diventa una barra, ma la riga sotto il nome dichiara che è ricavato. È il caso dei due heel raise a ROM neutra nella scheda del gastrocnemio mediale</li>
-        <li><strong>Grandezza costruita da noi, che nell'articolo non esiste</strong> — non diventa mai una barra, per quanto la ricostruzione sia accurata. Resta nel Continuum, nella forma qualitativa in cui l'articolo la riporta. È il caso della velocità di fibra di Collings: gli autori la descrivono a parole, senza valori per esercizio, e ogni numero ricavato sarebbe una nostra invenzione con una soglia nostra</li>
-      </ul>
-      <p style="font-size:14px;line-height:1.55;margin:8px 0 0">La terza categoria è la più insidiosa, perché il risultato sembra un dato come gli altri: barre ordinabili, colori, fasce. Aggiunge apparenza di precisione senza aggiungere informazione — la card diceva già tutto.</p>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Forza stimata: un'unità diversa dal %MVIC</h3>
-      <div class="meta">Collings 2026 · le schede in newton del distretto Inguine</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">Sono le uniche schede dell'app che non riportano una percentuale. Vale la pena capire perché sono qui comunque.</p>
-      <ul>
-        <li><strong>L'EMG stima l'eccitazione, non la forza</strong> — la relazione fra attivazione e tensione dipende da lunghezza e velocità di accorciamento delle fibre, quindi nel movimento dinamico un'attivazione più alta non significa una forza più alta</li>
-        <li><strong>Gli autori l'hanno verificato</strong> — in uno studio precedente sugli esercizi per i glutei hanno trovato scarso accordo fra la classifica ottenuta con l'EMG e quella ottenuta con la forza. Non è una questione teorica</li>
-        <li><strong>Come si ottiene il numero</strong> — cinematica 3D, forze di reazione al suolo ed EMG entrano in un modello muscoloscheletrico scalato sul singolo soggetto e calibrato per far coincidere i momenti articolari predetti con quelli misurati</li>
-        <li><strong>Quanto è affidabile</strong> — l'accordo fra momenti predetti e dinamica inversa è buono, meno l'accordo sulla forma dell'onda di eccitazione</li>
-        <li><strong>I tier</strong> sono il clustering k-means calcolato dagli autori, non una nostra soglia: per questo le barre sono colorate per tier e non per fascia di attivazione, che su un asse in newton non vorrebbe dire nulla</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Le schede (HD): EMG ad alta densità</h3>
-      <div class="meta">Hegyi 2018 · EMG ad alta densità, 15 canali per muscolo</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">Nelle quattro schede <strong>(HD)</strong> del distretto Ischiocrurali il %MVIC c'è davvero — è il denominatore giusto — ma la misura non è quella delle altre schede, e il confronto va tenuto dentro la famiglia.</p>
-      <ul>
-        <li><strong>Normalizzazione canale per canale</strong> — ogni singolo canale è espresso come frazione della propria attività massima durante le MVIC. Un elettrodo convenzionale sul ventre muscolare dà un numero solo, che non coincide con nessuno dei tre valori regionali</li>
-        <li><strong>Ogni barra è la media di 5 canali</strong> — prossimale = canali 11–15, medio = 6–10, distale = 1–5, lungo 15 cm di muscolo. Non è l'attivazione di un punto ma di un terzo di ventre muscolare</li>
-        <li><strong>Media di fase, non picco</strong> — RMS sull'intera fase eccentrica o concentrica (circa 2 secondi ciascuna, a metronomo), su sei ripetizioni al 12-RM</li>
-        <li><strong>Valori letti dalla figura</strong> — le tabelle dell'articolo riportano Cohen's d; le ampiezze stanno solo nella Figura 4. La ricostruzione riproduce tutti i range citati nel testo dell'articolo, ma resta un'approssimazione al punto percentuale</li>
-      </ul>
-      <h4>Come si legge</h4>
-      <ul>
-        <li>Confronta <strong>fra regioni dentro lo stesso esercizio</strong> per capire dove si concentra il carico, e <strong>fra esercizi dentro la stessa scheda</strong> per costruire una progressione</li>
-        <li>Non confrontare la scheda eccentrica con la concentrica come se fossero lo stesso esercizio: sono due fasi dello stesso movimento, e il rapporto fra i due capi cambia fra l'una e l'altra</li>
-        <li>Non affiancare questi numeri a quelli delle schede <em>(sprint)</em>, che hanno un altro denominatore, né a quelli delle schede <em>(Hirose)</em>, che misurano una tenuta isometrica a torque imposto</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Le schede (Hirose): leg curl e ponte isometrici</h3>
-      <div class="meta">Hirose e Tsuruike 2018 · confrontabile solo al suo interno</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">Le cinque schede <strong>(Hirose)</strong> portano in parte gli stessi muscoli delle altre schede del distretto, ma non stanno sulla stessa scala e non vanno affiancate.</p>
-      <ul>
-        <li><strong>Denominatore diverso</strong> — qui è la MVIC isometrica di ciascun muscolo (leg curl prono a 90° per gli ischiocrurali, estensione d'anca a ginocchio flesso per il gluteo, estensione del tronco per gli erettori). Le schede Ischiocrurali usano invece il picco raggiunto durante sprint massimale</li>
-        <li><strong>Misura diversa</strong> — RMS medio dei 2 secondi centrali di una tenuta isometrica di 5 secondi, non il picco della ripetizione</li>
-        <li><strong>Compito diverso</strong> — nel leg curl l'intensità è imposta dall'esterno (20% e 40% del torque massimo, controllato al dinamometro): l'attivazione registrata non è quella di un esercizio eseguito al massimo, ma quella richiesta per produrre quel torque a quell'angolo</li>
-      </ul>
-      <p style="font-size:14px;line-height:1.55;margin:8px 0 0">Conseguenza pratica: dentro le schede (Hirose) confronta pure liberamente fra angoli ed esercizi — è esattamente il confronto che lo studio ha disegnato. Fuori, no.</p>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Cuffia dei rotatori e deltoide</h3>
-      <div class="meta">Edwards 2021 · elettrodi a filo per la cuffia, di superficie per il deltoide</div>
-      <h4>Test di riferimento</h4>
-      <ul>
-        <li><strong>Sovraspinato</strong> — empty can: spalla a 90° nel piano scapolare, rotazione interna, gomito esteso; resistenza al gomito</li>
-        <li><strong>Sottoscapolare</strong> — RI: spalla a 90° nel piano scapolare, gomito a 90°; resistenza al polso</li>
-        <li><strong>Infraspinato</strong> — RE: spalla a 0°, gomito a 90°; resistenza al polso</li>
-        <li><strong>Deltoidi</strong> — abduzione a 90° in piedi; resistenza sopra il gomito</li>
-      </ul>
-      <h4>Nota della review 2017</h4>
-      <ul>
-        <li>Esclusi gli studi che registravano il sovraspinato con EMG di superficie: è troppo profondo e il cross-talk falsa la lettura</li>
-        <li>L'infraspinato invece è stato accettato anche di superficie, ed è probabilmente il motivo della grande dispersione dei suoi valori</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Trapezio e dentato</h3>
-      <div class="meta">Ekstrom 2003 · posizioni di Kendall</div>
-      <ul>
-        <li>Non un test unico: per ogni muscolo sono state provate più posizioni e si è preso il valore più alto come MVIC individuale</li>
-        <li>Trapezio superiore: shrug resistito, abduzione a 90° con capo ruotato dal lato opposto, o spalla flessa a 125°</li>
-        <li>Trapezio medio e inferiore: prono con estensione orizzontale e RE, oppure braccio sopra la testa in linea con le fibre del trapezio inferiore</li>
-        <li>Dentato: spalla flessa a 125° o abdotta a 125° nel piano scapolare</li>
-        <li>Conseguenza: valori sopra il 100% MVIC sono possibili, e infatti lo shrug arriva a 119% sul trapezio superiore</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>Dentato anteriore: dove mettere l'elettrodo</h3>
-      <div class="meta">Januario 2022 · 20 donne giovani sane, ICC ≥0,89 in tutte le condizioni</div>
-      <h4>Cosa fare</h4>
-      <ul>
-        <li><strong>Sensore al 7° spazio intercostale</strong> sulla linea ascellare media, non a livello del processo xifoideo: segnale più stabile fra le prove e ampiezza maggiore</li>
-        <li><strong>Posizione seduta</strong> con spalla flessa a 90° o 125° e protrazione mantenuta durante tutta la contrazione</li>
-        <li>Da evitare il supino: ha dato i valori più bassi nelle contrazioni submassimali</li>
-      </ul>
-      <h4>Massimale o submassimale</h4>
-      <ul>
-        <li>Entrambe affidabili, ma la contrazione submassimale ha mostrato coefficiente di variazione ed errore standard migliori — e risulta più tollerabile in presenza di dolore</li>
-      </ul>
-      <h4>Limiti</h4>
-      <ul>
-        <li>Solo donne giovani sane, escluse le atlete overhead; da verificare su uomini e su popolazioni sintomatiche</li>
-        <li>Il dentato è piccolo e vicino al gran dorsale: il cross-talk resta il problema principale, e il tessuto adiposo laterale peggiora l'impedenza</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b3)">
-      <h3>Anca: glutei contro TFL</h3>
-      <div class="meta">Selkowitz 2013 · elettrodi a filo, 20 soggetti sani</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">Il tensore della fascia lata è un abduttore, ma anche un rotatore interno d'anca: se l'obiettivo è controllare adduzione e rotazione interna eccessive, attivarlo lavora contro lo scopo. Gli autori hanno costruito un indice gluteo/TFL che premia gli esercizi con glutei molto attivi e TFL poco attivo.</p>
-      <h4>Indice gluteo/TFL, dal più alto</h4>
-      <ul>
-        <li>Clam con elastico — 115</li>
-        <li>Sidestep in semi-squat — 64</li>
-        <li>Ponte monopodalico — 59</li>
-        <li>Quadrupedia con ginocchio esteso e con ginocchio flesso — 50 entrambi</li>
-        <li>Sotto 40: abduzione in decubito laterale, step-up, ponte bipodalico, squat, hip hike, affondo</li>
-      </ul>
-      <h4>Il caso dell'abduzione in decubito laterale</h4>
-      <ul>
-        <li>È l'esercizio con il gluteo medio più attivo (44% MVIC), ma anche quello con il TFL più attivo (32%): il rapporto resta sfavorevole</li>
-        <li>Nell'hip hike il grande gluteo superiore è addirittura meno attivo del TFL</li>
-      </ul>
-      <h4>Limiti</h4>
-      <ul>
-        <li>Soggetti sani senza dolore; l'elastico di clam e sidestep non è quantificato</li>
-        <li>Ponte bipodalico e squat hanno un buon rapporto ma ampiezze basse: l'indice li penalizza, e aumentare il carico li riporterebbe in alto</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b3)">
-      <h3>Perché i numeri dell'anca sono più alti</h3>
-      <div class="meta">Tre fonti, tre modi di normalizzare</div>
-      <ul>
-        <li><strong>Selkowitz 2013</strong> — elettrodi a filo, media della ripetizione. I valori più bassi delle tre fonti: misura il muscolo bersaglio senza cross-talk e non usa il picco</li>
-        <li><strong>Boren 2011</strong> — elettrodi di superficie, picco della ripetizione, soglia di rinforzo posta al 70% MVIC. Due esercizi superano il 100%, e gli autori lo attribuiscono a MVIC sottostimate o alla co-contrazione del core, assente nel test manuale</li>
-        <li><strong>Goller 2024</strong> — picco normalizzato, con esercizi eseguiti come contrazioni volontarie massimali: sette su otto superano il 100% MVIC. Gli autori stessi invitano a rimettere in discussione le posizioni di test usate per la MVIC</li>
-      </ul>
-      <p style="font-size:14px;line-height:1.55;margin:8px 0 0">Conseguenza pratica: confronta gli esercizi dentro la stessa fonte. L'abduzione in decubito laterale compare a 44% con il filo e a 63% in superficie — è lo stesso esercizio, non un carico maggiore.</p>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b3)">
-      <h3>Grande gluteo con carico esterno: una scheda a parte</h3>
-      <div class="meta">Krause Neto 2020 · revisione sistematica, 16 studi, 231 soggetti, 24 varianti di esercizio</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">Questa revisione raccoglie squat, stacchi, hip thrust, affondi e step-up eseguiti con carico esterno (bilanciere, RM dal 40 al 100%), tutti normalizzati su MVIC ma con posizioni di test diverse fra gli studi di origine (glute squeeze in piedi, estensione d'anca prona a 90°, e altre). Per ogni esercizio il valore è la media aggregata fra gli studi che lo hanno misurato — non la misura di un singolo laboratorio.</p>
-      <ul>
-        <li>Tenuta separata dalla scheda "Grande gluteo" principale: quella raccoglie esercizi perlopiù a corpo libero o con elastico su popolazioni riabilitative; questa raccoglie esercizi da sala pesi su soggetti allenati, con obiettivo di forza/ipertrofia più che di rinforzo protetto</li>
-        <li>Uno stesso gesto (es. step-up) può comparire su entrambe le schede con valori molto diversi: qui il carico esterno spiega gran parte della differenza, non un errore di trascrizione</li>
-        <li>Le deviazioni standard sono ampie in molti esercizi (es. stacco tradizionale, 64,5% ± 41,7%): riflettono la variabilità reale fra soggetti e fra metodi di normalizzazione degli studi aggregati, non un dato impreciso</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b4)">
-      <h3>Quadricipite: una sola MVIC per quattro ventri</h3>
-      <div class="meta">Vera-Cartagena 2026 · seduto al dinamometro, anca e ginocchio a 90°</div>
-      <h4>Il limite dichiarato dagli autori</h4>
-      <ul>
-        <li>Un unico test di normalizzazione per retto femorale e vasti. Quella posizione favorisce il retto femorale, mentre i vasti — a orientamento più obliquo — potrebbero non raggiungere il loro vero massimo</li>
-        <li>Se è così, la MVIC dei vasti è sottostimata e i loro %MVIC negli esercizi risultano <em>gonfiati</em>. Il divario vasti/retto femorale va letto con questa riserva</li>
-        <li>È un limite comune a quasi tutta la letteratura sul quadricipite: chi usa 60°, chi 70–75°, chi il supino. Non esiste consenso su quale posizione serva a quale ventre</li>
-      </ul>
-      <h4>Elettrodi</h4>
-      <ul>
-        <li>SENIAM per vasto mediale, vasto laterale e retto femorale mediale</li>
-        <li>Retto femorale prossimale a un terzo della linea SIAS–margine superiore della rotula: le due porzioni si comportano diversamente fra estensione di ginocchio e flessione d'anca</li>
-      </ul>
-      <h4>Affidabilità</h4>
-      <ul>
-        <li>ICC da 0,80 a 0,99 nella quasi totalità delle combinazioni, con SEM sotto il 20%; solo backward lunge sul retto femorale prossimale (0,70) e reverse Nordic sul vasto laterale (0,61) restano moderati</li>
-        <li>Solo maschi, calciatori amatoriali sani: non estendibile a donne, sedentari o altre fasce d'età</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b4)">
-      <h3>Marshall 2020: perché sta in una scheda a parte</h3>
-      <div class="meta">Calzoncini EMG tessili · EMG medio, non di picco</div>
-      <ul>
-        <li>Registra il quadricipite come blocco unico (elettrodi tessili sulla porzione distale di vasto mediale e laterale), non i singoli ventri</li>
-        <li>Usa il <strong>valore medio</strong> del segnale sull'intera serie, non il picco della ripetizione come Vera-Cartagena. A parità di esercizio il valore medio è sistematicamente più basso</li>
-        <li>Per questo la scheda "quadricipite globale" non porta la soglia del 40% e non va confrontata riga per riga con le schede dei singoli ventri</li>
-        <li>Il confronto che regge è quello interno: giovani contro anziani, e attività quotidiane contro modalità di rinforzo</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b1)">
-      <h3>Tricipite surale: un valore per tre muscoli</h3>
-      <div class="meta">Mullaney 2011 · elettrodi su gastrocnemio mediale, laterale e soleo</div>
-      <h4>Cosa mostra la scheda</h4>
-      <ul>
-        <li>Lo studio registra i tre capi separatamente, ma le cifre disponibili sono un <strong>valore aggregato per esercizio</strong>. La scheda quindi non distingue mediale, laterale e soleo: dice quanto costa l'esercizio al complesso, non come si divide il lavoro al suo interno</li>
-        <li>Per separare i tre capi servirebbe la tabella dell'articolo. Fino ad allora, per la domanda "mediale o laterale" restano più adatti gli studi sulle posizioni del piede</li>
-        <li>Non ci sono baffi: le cifre pubblicate nell'abstract sono medie senza dispersione. Il testo dei risultati riporta valori leggermente più bassi per alcuni esercizi (tavoletta 23,4%, ankle pump 36,7%, elastico 43,2%, step-up 59%): differenze di uno o due punti che non cambiano la gerarchia</li>
-      </ul>
-      <h4>Perché due esercizi superano il 100%</h4>
-      <ul>
-        <li>Heel raise monopodalico 112% e salto 129%: la MVIC di riferimento è isometrica su dinamometro isocinetico, mentre questi due sono compiti dinamici monopodalici in cui il peso corporeo intero grava su una caviglia sola</li>
-        <li>È lo stesso meccanismo già visto su Boren 2011 e Goller 2024 per i glutei — il denominatore non è abbastanza capiente per il numeratore</li>
-      </ul>
-      <h4>Limiti</h4>
-      <ul>
-        <li>Dieci soggetti sani, venti arti: numerosità ridotta, e nessun paziente operato</li>
-        <li>EMG di superficie: il soleo sta sotto il gastrocnemio, e il cross-talk fra i tre capi è inevitabile con questa tecnica</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b5)">
-      <h3>Perché manca la scheda del laterale</h3>
-      <div class="meta">Ferri-Caruana 2025 · due scale diverse dentro lo stesso distretto</div>
-      <h4>Cosa è entrato e cosa no</h4>
-      <ul>
-        <li>Del gastrocnemio mediale l'articolo riporta a testo due valori assoluti — 96,1% in bipodalico e 104,4% in monopodalico a escursione completa — e le differenze medie fra escursione neutra e completa (13% e 14%). Dalle une e dagli altri ho ricavato per differenza i due valori a escursione neutra, che nella scheda sono etichettati come tali</li>
-        <li>Del <strong>laterale non esiste nessun valore assoluto nel testo</strong>, verificato riga per riga: ci sono le differenze fra condizioni (9-10% fra escursione neutra e completa), le statistiche dei confronti, e l'affermazione qualitativa che nell'heel raise monopodalico in carico le ampiezze di mediale e laterale eguagliano quelle dello sprint. Nessuna cifra</li>
-        <li>Esiste però una <strong>Tabella 1</strong> con i rapporti mediale/laterale per condizione e per arto, che la versione HTML non rende. Da quei rapporti il laterale si ricaverebbe per divisione dai valori del mediale, e la scheda si completerebbe senza leggere nulla dalle figure</li>
-      </ul>
-      <h4>Attenzione: due denominatori nello stesso distretto</h4>
-      <ul>
-        <li><strong>Tricipite surale</strong> è normalizzato su MVIC isometrica al dinamometro; <strong>gastrocnemio mediale</strong> sul picco durante sprint massimale. Le due schede non si confrontano fra loro, nonostante stiano sotto la stessa etichetta</li>
-        <li>Lo si riconosce dalla riga sotto il nome dell'esercizio: dove c'è scritto "% dello sprint" la scala è l'altra</li>
-      </ul>
-      <h4>Limiti</h4>
-      <ul>
-        <li>Diciannove maschi giovani e attivi, esercizi eseguiti senza carico esterno: con sovraccarico i rapporti potrebbero cambiare</li>
-        <li>Deviazioni standard ampie — le strategie di attivazione sono molto individuali — e affidabilità non misurata in questo studio, ma desunta da lavori precedenti</li>
-        <li>Gli stessi autori considerano ancora non conclusive le evidenze sull'effetto della <em>posizione del piede</em> in compiti dinamici in carico: escursione e appoggio monopodalico sono leve meglio documentate della rotazione del piede</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b2)">
-      <h3>I sei studi 2026: cosa è entrato nei grafici</h3>
-      <div class="meta">Uebayashi · Lee · Park · Lawrence · Barra-López · Keerasomboon</div>
-      <h4>Il motivo è lo stesso per tutti</h4>
-      <ul>
-        <li><strong>Park 2026 e Lee 2026 sono a barre</strong> — il primo nel distretto Back squat, il secondo dentro l'Anca: le tabelle complete sono recuperabili dal sito dell'editore, che le pubblica in HTML. Otto muscoli, sei condizioni, due fasi</li>
-        <li>Gli altri normalizzano correttamente su MVIC e in linea di principio sarebbero grafici, ma i valori per esercizio e muscolo stanno nelle <strong>tabelle e nelle figure</strong>, che dalla versione elettronica consultata non sono accessibili</li>
-        <li>Nota sulla scala: Lee usa l'EMG medio della tenuta di 5 secondi, Selkowitz la media della ripetizione, Boren e Goller il picco. Le tre fonti convivono nelle schede dell'Anca da prima, ed è il motivo per cui la card "Perché i numeri dell'anca sono più alti" resta la prima cosa da leggere prima di confrontare due righe</li>
-        <li>Nel testo restano solo i confronti statistici e qualche valore isolato: quelli sono nelle card, con la cifra dove esiste</li>
-        <li>Keerasomboon fa eccezione per un altro motivo: non misura ampiezza EMG ma lunghezza del fascicolo all'ecografia. Il %MVIC lì è l'<em>intensità imposta</em>, non il risultato</li>
-      </ul>
-      <h4>Cosa servirebbe per portarli nei grafici</h4>
-      <ul>
-        <li>Uebayashi — Supplemental Information 1, che contiene i dati grezzi di ampiezza e rapporti per tutte e nove le posizioni</li>
-        <li>Lawrence — l'articolo completo, che è dietro paywall Elsevier</li>
-        <li>Barra-López — la tabella dei valori RMS per i sette muscoli nei tre movimenti</li>
-      </ul>
-      <h4>Una nota su Lawrence</h4>
-      <ul>
-        <li>Sarebbe il primo distretto lombare dell'app, e userebbe elettrodi indwelling, cioè la stessa qualità di misura del filo intramuscolare di Selkowitz e Uebayashi</li>
-        <li>I valori disponibili sono però <em>differenze</em> fra esercizi, non ampiezze assolute: da soli non bastano a costruire una scala</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b5)">
-      <h3>Quattro studi senza barre, e perché</h3>
-      <div class="meta">Quando il denominatore non è una MVIC</div>
-      <h4>Karst e Jewett 1993 — quadricipite</h4>
-      <ul>
-        <li>Normalizzano sul valore più alto registrato per quel muscolo <em>durante uno qualsiasi degli esercizi</em>, non su una MVIC. Le percentuali sembrano %MVIC ma misurano un'altra cosa</li>
-        <li>Il messaggio clinico resta: il quadriceps setting attiva vasto mediale obliquo, vasto mediale lungo e vasto laterale più di ogni variante di straight leg raising, e l'adduzione d'anca concomitante <strong>non</strong> seleziona il VMO — il rapporto VMO/VL più basso è proprio quello dello SLR in rotazione esterna, l'esercizio che veniva raccomandato a quello scopo</li>
-        <li>Il retto femorale fa l'opposto: alto nello SLR, basso nel setting. È la firma di un biarticolare</li>
-      </ul>
-      <h4>van den Tillaar 2017 e Ferri-Caruana 2022 — ischiocrurali</h4>
-      <ul>
-        <li>Normalizzano sul picco durante sprint massimale. Per gli ischiocrurali lo sprint supera ampiamente una MVIC isometrica: gli stessi esercizi, letti su scala %MVIC, apparirebbero molto più alti</li>
-        <li>La scelta è argomentata, non casuale: quando l'attivazione in un compito supera il 100% del riferimento — cosa frequente con la MVIC — la capacità richiesta da quel compito viene sottostimata. Lo sprint offre un denominatore più capiente. In più, misurando MVIC separate per ogni muscolo non si può garantire lo stesso livello di intensità e motivazione fra un test e l'altro</li>
-        <li>Il prezzo è l'incompatibilità con ogni altra scheda di questa app, e la dipendenza dalla qualità dello sprint del singolo soggetto</li>
-        <li>I due studi differiscono anche fra loro: van den Tillaar usa treadmill non motorizzato su 12 studenti maschi, Ferri-Caruana sprint overground di 60 m su 24 atleti (11 uomini, 13 donne), con normalizzazione sul tratto 20–50 m a velocità di punta e RMS calcolato sulla sola fase eccentrica delle ripetizioni centrali</li>
-        <li>La corsa su treadmill produce attivazione muscolare inferiore rispetto all'overground: i valori dei due studi non sono sovrapponibili nemmeno fra loro</li>
-      </ul>
-      <h4>Cibulka 2017 — gastrocnemio mediale e laterale</h4>
-      <ul>
-        <li>Normalizza contro una MVIC che è essa stessa un <strong>heel raise monopodalico a piede neutro</strong>, sotto bilanciere, con caviglia a metà fra neutra e plantarflessione completa e ginocchio a 0°. Il denominatore è quindi un esercizio, non un test isometrico standard: i suoi %MVIC non stanno sulla scala né di Mullaney né di Ferri-Caruana</li>
-        <li>Nel testo sono reperibili tre valori su otto per l'heel rise in piedi (toe-in laterale 70,7%; toe-out mediale 79,2% e laterale 68,9%); le medie del prono e il mediale in toe-in stanno nelle Figure 3 e 4</li>
-        <li>Il risultato che conta non è comunque un'ampiezza ma un confronto, e quello è nel Continuum</li>
-      </ul>
-
-      <h4>Ugbolue 2021 — tricipite surale</h4>
-      <ul>
-        <li>Un solo esercizio (heel raise bipodalico) in tre fasi, con valori leggibili solo dalle figure</li>
-        <li>Deviazioni standard enormi e singoli soggetti sopra il 100% MVC: il tibiale anteriore arriva al 52–54% di media, ma togliendo gli outlier scende a 35–38%</li>
-        <li>Nessuna differenza fra fase concentrica ed eccentrica in nessuno dei sei muscoli, e nessuna differenza fra sessi salvo il gastrocnemio mediale</li>
-        <li>Il dato utile è metodologico: EMG di superficie su ventri piccoli e profondi come tibiale anteriore e peronei produce dispersione tale da rendere le medie poco informative</li>
-      </ul>
-    </div>
-
-    <div class="phase" style="border-left-color:var(--b5)">
-      <h3>Non basta quanto: conta anche a che angolo</h3>
-      <div class="meta">van den Tillaar 2017, Tabella 1 · angoli di anca e ginocchio al picco di attivazione</div>
-      <p style="font-size:14px;line-height:1.55;margin:0 0 8px">L'ampiezza dice quanto un esercizio carica il muscolo, non se lo carica <em>dove serve</em>. Il rischio di lesione si concentra nella fase di volo tardiva, ad anca flessa e ginocchio in estensione: un esercizio che raggiunge il picco a un'altra combinazione angolare allena una condizione diversa da quella in cui il muscolo cede.</p>
-      <h4>Riferimento — sprint</h4>
-      <ul>
-        <li>Anca 120–126°, ginocchio 123–128° a seconda del muscolo</li>
-      </ul>
-      <h4>Chi ci si avvicina</h4>
-      <ul>
-        <li><strong>Nordic hamstring</strong> — ginocchio 128–129°, sovrapponibile allo sprint; anca 135–138°, di poco superiore</li>
-        <li><strong>Laying kick</strong> — anca 132–134°, vicina; ginocchio 98–107°, più esteso che nello sprint</li>
-      </ul>
-      <h4>Chi se ne allontana</h4>
-      <ul>
-        <li><strong>Standing kick</strong> — anca 80–82° contro i 120–126° dello sprint: il picco cade in una posizione tutt'altra, e l'ampiezza è fra le più basse</li>
-        <li><strong>Cranes</strong> e <strong>cranes with return</strong> — anca 150–160°, la più distante di tutte, con ampiezze basse su tutti e tre i muscoli</li>
-        <li><strong>Nordic with return</strong> e <strong>with bump</strong> — spostano il picco di ginocchio a 111–120°, allontanandolo dal valore che la versione base centrava</li>
-      </ul>
-      <h4>Come leggerlo insieme alle barre</h4>
-      <ul>
-        <li>Il Nordic hamstring è l'unico che sta in alto per ampiezza <em>e</em> centra l'angolo di ginocchio dello sprint: è il motivo per cui resta l'esercizio di riferimento nella prevenzione</li>
-        <li>Le due varianti dei cranes falliscono su entrambi i fronti, poca ampiezza e angolo sbagliato</li>
-        <li>Il laying kick compensa: massimo sul semimembranoso e anca quasi giusta, ma con la dispersione più ampia dello studio — funziona molto diversamente da soggetto a soggetto</li>
-      </ul>
-    </div>
-  </section>
-
   <footer id="foot"></footer>
 </div>
 
@@ -3261,7 +2943,7 @@ PR_BLOCKS.forEach(([label,html],i)=>{
   prTabs.appendChild(b);
 });
 prBody.innerHTML=PR_BLOCKS[0][1];
-const VIEWS=[["v-es","sec-es"],["v-pr","sec-pr"],["v-me","sec-me"]];
+const VIEWS=[["v-es","sec-es"],["v-pr","sec-pr"]];
 VIEWS.forEach(([b])=>{
   document.getElementById(b).onclick=()=>{
     VIEWS.forEach(([bb,ss])=>{
@@ -3276,7 +2958,7 @@ VIEWS.forEach(([b])=>{
 foot.innerHTML=`La scala si adatta al muscolo selezionato: confronta i numeri, non la lunghezza delle barre fra schede diverse. I baffi cambiano significato con la fonte: range delle medie fra studi nella review 2017, IC 95% nello studio 2021, deviazione standard in Ekstrom 2003, Selkowitz 2013, Vera-Cartagena 2026, Marshall 2020, van den Tillaar 2017, Krause Neto 2020 (media aggregata fra studi, non singola misura) e Hwang 2017.<br><br>
 Il distretto <strong>Core</strong> è l'unico in cui una singola scheda raccoglie decine di studi diversi: ogni barra porta il nome dello studio da cui viene, e i confronti vanno fatti dentro lo stesso studio, mai fra studi. È la stessa regola del denominatore applicata al caso estremo — la review di origine non ha potuto aggregare quei numeri, e nemmeno questa app lo fa.<br><br>
 Sulle schede della coscia la soglia è al 40%: è il valore citato come necessario per l'incremento di forza con esercizio resistito. Sotto quella linea l'esercizio non è inutile — resta indicato in fase precoce, nel dolore femoro-rotuleo e nell'artrosi di ginocchio — ma non è uno stimolo di rinforzo. La scheda del quadricipite globale non porta soglia: usa l'EMG medio sulla serie invece del picco, e non è confrontabile con le schede dei singoli ventri. Lo stesso vale per il distretto <strong>Back squat</strong>, che usa l'EMG medio della fase: le sue schede si confrontano fra loro, non con quelle di coscia e ischiocrurali, anche dove il muscolo è lo stesso. La soglia del 40% compare solo sui tre ventri del quadricipite.<br><br>
-Le schede degli ischiocrurali e quella del gastrocnemio mediale stanno su un'altra scala: van den Tillaar 2017 e Ferri-Caruana 2025 normalizzano sul picco raggiunto durante sprint massimale, non su una MVIC isometrica, e i valori sono stati letti dalla Figura 3 dell'articolo — vanno presi come approssimazioni, non come cifre esatte. Vale lo stesso per le schede <strong>(HD)</strong> degli ischiocrurali, ricostruite dalla Figura 4 di Hegyi 2018, e per le schede in newton e di attivazione dell'inguine, ricostruite dalle Figure 5 e 6 di Collings 2026: la lettura è grafica e approssimata. La card del Metodo spiega a quali condizioni un dato letto da una figura può diventare una barra. Nel distretto polpaccio convivono due denominatori: il tricipite surale è su MVIC isometrica, il gastrocnemio mediale sullo sprint. Riconosci la scala dalla riga sotto il nome dell'esercizio. Non confrontare fra loro schede su denominatori diversi, e non applicarci le soglie di rinforzo.<br><br>Tre studi restano fuori dai grafici: Karst 1993, che normalizza sul massimo fra gli esercizi anziché su una MVIC, e Ferri-Caruana 2022 e Tsaklis 2015, i cui valori per singolo esercizio e muscolo compaiono solo dentro le figure — in Tsaklis l'asse della figura è per di più in microvolt, non in %MVIC. Il loro contenuto è nel Continuum e nel Metodo.<br><br>
+Le schede degli ischiocrurali e quella del gastrocnemio mediale stanno su un'altra scala: van den Tillaar 2017 e Ferri-Caruana 2025 normalizzano sul picco raggiunto durante sprint massimale, non su una MVIC isometrica, e i valori sono stati letti dalla Figura 3 dell'articolo — vanno presi come approssimazioni, non come cifre esatte. Vale lo stesso per le schede <strong>(HD)</strong> degli ischiocrurali, ricostruite dalla Figura 4 di Hegyi 2018, e per le schede in newton e di attivazione dell'inguine, ricostruite dalle Figure 5 e 6 di Collings 2026: la lettura è grafica e approssimata. Nel distretto polpaccio convivono due denominatori: il tricipite surale è su MVIC isometrica, il gastrocnemio mediale sullo sprint. Riconosci la scala dalla riga sotto il nome dell'esercizio. Non confrontare fra loro schede su denominatori diversi, e non applicarci le soglie di rinforzo.<br><br>Tre studi restano fuori dai grafici: Karst 1993, che normalizza sul massimo fra gli esercizi anziché su una MVIC, e Ferri-Caruana 2022 e Tsaklis 2015, i cui valori per singolo esercizio e muscolo compaiono solo dentro le figure — in Tsaklis l'asse della figura è per di più in microvolt, non in %MVIC. Il loro contenuto è nel Continuum.<br><br>
 Sulle schede scapolari non compare la soglia del 15%: quello studio cercava la massima attivazione per il rinforzo, non il carico minimo per proteggere una riparazione. Va letto al contrario, dall'alto verso il basso. L'ICC riportato è l'affidabilità test-retest della misura: sotto 0,80 il valore va preso con cautela — lo shrug per il trapezio inferiore ha ICC 0,05.<br><br>
 L'EMG stima il carico, non lo misura: usa queste soglie come guida, non come garanzia di sicurezza del tessuto riparato.<br><br>
 Edwards PK, Ebert JR, Littlewood C, Ackland T, Wang A. <em>A Systematic Review of Electromyography Studies in Normal Shoulders to Inform Postoperative Rehabilitation Following Rotator Cuff Repair</em>. J Orthop Sports Phys Ther 2017;47(12):931–944.<br>
@@ -3303,7 +2985,7 @@ Mullaney M, Tyler TF, McHugh M, Orishimo K, Kremenic I, Caggiano J, Ramsey A. <e
 Ferri-Caruana AM, Juesas A, Saez-Berlanga A, Colado JC. <em>Differential Recruitment of Medial and Lateral Gastrocnemius During Heel Raises: Role of Ankle ROM, Unilateral Execution, and Limb Dominance</em>. Appl Sci 2025;15:8731. CC BY 4.0.<br>
 Cibulka M, Wenthe A, Boyle Z, Callier D, Schwerdt A, Jarman D, Strube MJ. <em>Variation in Medial and Lateral Gastrocnemius Muscle Activity with Foot Position</em>. Int J Sports Phys Ther 2017;12(2):233–241.<br>
 Nunes JP, et al. <em>Different Foot Positioning During Calf Training to Induce Portion-Specific Gastrocnemius Muscle Hypertrophy</em>. 2020. PMID 32735428.<br><br>
-<strong>Studi 2026 (schede del Continuum e del Metodo), da PubMed:</strong><br>
+<strong>Studi 2026 (schede del Continuum), da PubMed:</strong><br>
 Uebayashi K, Okubo Y, Akasaka K, et al. <em>Muscle activity of deep hip muscles across joint positions and elevation phases during side-lying hip abduction</em>. PeerJ 2026;14:e21536. doi:10.7717/peerj.21536<br>
 Lee HY, Zhang YH, Kim KC, Lim HW. <em>Effects of Knee Flexion Angle on Gluteus Medius Activation and Activation Ratios During the Modified Clamshell Exercise</em>. Medicina 2026;62(6):1025. doi:10.3390/medicina62061025<br>
 Park JH, Lei S, Cho HY, Kim SH. <em>Effects of Barbell Position and Squat Depth on Trunk and Lower-Extremity Muscle Activation During the Back Squat in Healthy Adult Men</em>. Medicina 2026;62(7):1339. doi:10.3390/medicina62071339<br>
