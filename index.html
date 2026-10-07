@@ -265,7 +265,7 @@ const D = {
 ["Pendolare",19,12,26,"21"],["Carrucola assistita in elevazione",23,18,28,"21"],
 ["Elevazione assistita con bastone, in piedi",24,null,null,"17"],["Flessione attiva",24,18,31,"21"],
 ["Bastone — elevazione anteriore",25,18,33,"21"],["Rock the baby — circonduzione",25,20,30,"21"],
-["Rock the baby — elevazione",26,17,35,"21"],["Table slide",26,17,34,"21"],
+["Rock the baby — elevazione",26,17,35,"21"],["Table slide (scivolamento al tavolo)",26,17,34,"21"],
 ["RE assistita con bastone, in piedi",27,null,null,"17"],["Wall slide assistito",28,20,35,"21"],
 ["Abduzione attiva",33,24,42,"21"],["Forward punch (spinta avanti)",35,8,69,"17"],
 ["RI a 0° di ABD",40,13,74,"17"],["RI a 45° di ABD",53,null,null,"17"],["RE a 0° di ABD",57,null,null,"17"],
@@ -2008,6 +2008,7 @@ const THRESH={
 const SHOULDER_LOW=["Sovraspinato","Infraspinato","Sottoscapolare","Piccolo rotondo","Deltoide ant.","Deltoide med.","Deltoide post."];
 
 const NOTE={
+"Split squat con bilanciere":"Split squat libero con bilanciere. Il 3-RM misurato in familiarizzazione era in media 77 kg, la metà dell'hip thrust.",
 "Trazione presa prona":"Presa in pronazione, mani a larghezza spalle. È la presa che attiva di più il trapezio medio — 60% contro 37% della presa neutra — ed è l'unica differenza significativa fra le quattro varianti in tutto lo studio.",
 "Trazione presa supina":"Presa in supinazione. Massimo bicipite brachiale al picco, ma nessuna differenza significativa dalle altre prese su nessun muscolo tranne il trapezio medio.",
 "Trazione presa neutra":"Prese parallele. Trapezio medio significativamente più basso della presa prona, sia al picco sia come media.",
@@ -2097,10 +2098,10 @@ const NOTE={
 "Rock the baby — elevazione":"In piedi flessi in avanti, il braccio operato è sorretto al gomito dalla mano opposta, che lo guida in flessione.",
 "Table slide (scivolamento al tavolo)":"Seduto al tavolo, la mano su un panno scivola in avanti e indietro sul piano; il tavolo sostiene il peso del braccio.",
 "Pendolare":"In piedi flessi in avanti a 90°, con la mano libera in appoggio; il braccio pende rilassato e il movimento nasce dal tronco, non dalla spalla.",
-"Clamshell 1":"Decubito laterale con entrambe le anche flesse a 45° e piedi uniti: si apre il ginocchio superiore in rotazione esterna. È il clam classico, e il più basso dei quattro.",
-"Clamshell 2":"Stessa partenza a 45° di flessione d'anca, ma le ginocchia restano a contatto e si solleva il piede superiore. Qui la rotazione è interna, non esterna: cambia il gesto, non solo il carico.",
-"Clamshell 3":"Anche flesse a 45°: l'arto superiore viene prima sollevato in abduzione e tenuto parallelo al piano, poi ruotato internamente mantenendo quella quota. Somma abduzione isometrica e rotazione.",
-"Clamshell 4":"Anca inferiore a 45°, anca superiore portata in posizione neutra (0° di flessione): l'arto sale parallelo al piano e da lì ruota internamente. Togliere la flessione d'anca è ciò che lo porta al valore più alto dei quattro.",
+"Clamshell 1":"Primo livello della progressione del clam descritta da Boren 2011. I dettagli esecutivi di ciascun livello sono nell'articolo originale e non sono riportati qui.",
+"Clamshell 2":"Secondo livello della progressione del clam di Boren 2011; vedi l'articolo originale per l'esecuzione.",
+"Clamshell 3":"Terzo livello della progressione del clam di Boren 2011; vedi l'articolo originale per l'esecuzione.",
+"Clamshell 4":"Quarto livello della progressione del clam di Boren 2011: l'unico dei quattro sopra la soglia del 70% per il gluteo medio.",
 "Clam modificato, ginocchio 60°":"Clam standardizzato: anca fissa a 30° di flessione, barra di riferimento per l'abduzione, biofeedback pressorio lombare a 35-45 mmHg, tenuta di 5 secondi. Qui il ginocchio è a 60°: è la condizione peggiore delle tre, con il TFL più attivo e il rapporto gluteo/TFL più basso.",
 "Clam modificato, ginocchio 90°":"Stessa esecuzione con ginocchio a 90°. Gluteo medio più alto e TFL più basso rispetto ai 60°: è la posizione da usare.",
 "Clam modificato, ginocchio 110°":"Stessa esecuzione con ginocchio a 110°. Nessuna differenza significativa rispetto ai 90° su nessuna variabile: flettere di più non aggiunge nulla.",
@@ -2119,7 +2120,7 @@ const NOTE={
 "Isometric clam":"Clam eseguito in isometria con il bacino inclinato all'indietro, cercando la massima rotazione esterna volontaria.",
 "Half-kneeling glute squeeze":"In ginocchio su un arto: contrazione massimale del gluteo dell'arto in appoggio in tre fasi, con progressiva flessione dell'anca controlaterale.",
 "Resisted knee split":"Isometrico puro: massima contrazione del gluteo dell'arto in appoggio contro la resistenza, con flessione isometrica dell'anca controlaterale.",
-"Hip thrust con bilanciere":"Spalle sulla panca, bilanciere sulle anche: estensione d'anca fino alla neutra con tenuta isometrica al culmine. Carico a 3-RM.",
+"Hip thrust con bilanciere":"Spalle sulla panca, bilanciere sulle anche: estensione d'anca fino alla neutra con tenuta isometrica al culmine. Il 3-RM misurato in familiarizzazione era in media 154 kg.",
 "Estensione anca in quadrupedia, ginocchio esteso":"Quadrupedia sui gomiti: si porta l'arto testato indietro e in alto estendendo anca e ginocchio fino a 0°.",
 "Estensione anca in quadrupedia, ginocchio flesso":"Come il precedente, ma il ginocchio resta flesso a 90° per tutta l'esecuzione.",
 "Abduzione in decubito laterale":"Decubito laterale con l'arto sottostante flesso; si abduce l'arto testato di circa 30° mantenendo estensione d'anca e ginocchio e punta del piede in avanti.",
@@ -2157,17 +2158,25 @@ const NOTE={
 "Sprint massimale":"Corsa alla massima velocità. È il denominatore di queste schede, non un esercizio da prescrivere: gli altri valori sono espressi come frazione del picco raggiunto qui."
 };
 
+const IDENT="Valore e IC identici fra sovraspinato e deltoide anteriore nella Tabella 3 dell'articolo originale: riportati come pubblicati.";
+const BADCI="IC omesso: nella Tabella 3 dell'articolo l'intervallo pubblicato è incoerente con la media.";
+const ROWNOTE={
+ "Sovraspinato|Flessione attiva|21":IDENT,"Sovraspinato|Abduzione attiva|21":IDENT,
+ "Deltoide ant.|Flessione attiva|21":IDENT,"Deltoide ant.|Abduzione attiva|21":IDENT,
+ "Deltoide ant.|Carrucola assistita in elevazione|21":BADCI,
+ "Deltoide med.|Bastone — elevazione anteriore|21":BADCI
+};
 const PHASES=[
  {t:"Fase 1 — protezione e mobilità precoce",m:"≤15% MVIC · precoce: settimane 2–6 · ritardata: 5–8",g:[
-   ["ROM passivo, flessione",["Inchino in avanti","Flessione assistita dal terapista, supino","Flessione auto-assistita, supino","Flessione in decubito laterale","Scivolamenti con panno","Press-up con panno"]],
+   ["ROM passivo, flessione",["Inchino in avanti (forward bow)","Elevazione assistita dal terapista, supino","Elevazione auto-assistita, supino","Elevazione in decubito laterale","Scivolamento con panno","Press-up con panno"]],
    ["ROM passivo, rotazione (niente RI; RE fino a 30°)",["RE assistita al muro","RE assistita con bastone, supino","RE assistita con bastone, in piedi"]]]},
  {t:"Fase 2 — da assistito ad attivo",m:"≤20% MVIC · precoce: settimane 7–9 · ritardata: 9–12",g:[
-   ["ROM attivo-assistito, flessione",["Rullata con palla","Flessione assistita con bastone","Wall walk/slide sostenuto, poi non sostenuto","Flessione con carrucola"]],
-   ["ROM attivo, flessione",["Press-up attivo supino","Press-up attivo reclinato"]],
+   ["ROM attivo-assistito, flessione",["Rullata con palla (ball roll)","Elevazione assistita con bastone, in piedi","Wall walk, poi wall slide sostenuto e non sostenuto","Elevazione con carrucola"]],
+   ["ROM attivo, flessione",["Press-up supino","Press-up inclinato"]],
    ["ROM attivo-assistito, rotazione",["Prosegue la RE della fase 1; si inizia RI auto-assistita e con bastone"]]]},
  {t:"Fase 3 — rinforzo",m:"21–50% MVIC · precoce: settimana 10 · ritardata: 13",g:[
-   ["ROM attivo, flessione",["Press-up in piedi e flessione attiva (leva corta → leva lunga)","Flessione attiva resistita"]],
-   ["Rinforzo, rotazione",["Progressione da seduto a in piedi (fino a 45° di ABD), poi decubito laterale","Rematore da seduto → rematore in piedi, forward/scapular punch"]]]},
+   ["ROM attivo, flessione",["Press-up in piedi e flessione attiva (leva corta → leva lunga)","Flessione/elevazione resistita in piedi"]],
+   ["Rinforzo, rotazione",["Progressione da seduto a in piedi (fino a 45° di ABD), poi decubito laterale","Rematore da seduto → rematore in piedi, forward punch"]]]},
  {t:"Fase 4 — rinforzo tardivo",m:"≥50% MVIC · dalla settimana 20 in entrambi i percorsi",g:[
    ["Flessione e abduzione attive",["ABD orizzontale prona a 90° e 100°"]],
    ["Rinforzo, rotazione",["RE in piedi a 90° di ABD, poi RE prona a 90°","Push-up, push-up plus, dynamic hug"]]]}
@@ -2296,7 +2305,7 @@ function render(){
     row.innerHTML=`<div class="rowhead">
         <div class="name">${tName(name)}<span class="type">${src==="br"?t(icc==="g"?"andatura":"esercizio"):src==="co"?t("Tier "+icc):(src==="st"||src==="fc")?t("% dello sprint"):bandName(mean)}<span class="src">${srcName}</span></span></div>
         <div class="val">${src==="co"?mean+" N":src==="br"?mean+"% PC":mean+"%"}<small>${txt}</small></div>
-      </div>${NOTE[name]?`<div class="desc">${t(NOTE[name])}</div>`:""}
+      </div>${NOTE[name]?`<div class="desc">${t(NOTE[name])}</div>`:""}${ROWNOTE[`${current}|${name}|${src}`]?`<div class="desc">${t(ROWNOTE[`${current}|${name}|${src}`])}</div>`:""}
       <div class="track">${rng}<div class="bar" style="background:${src==="br"?(icc==="g"?"var(--b2)":"var(--b4)"):src==="co"?tierColor(icc):bandColor(mean)}"></div></div>`;
     rowsEl.appendChild(row);
     requestAnimationFrame(()=>row.querySelector(".bar").style.width=pct(mean)+"%");
