@@ -87,4 +87,6 @@ I dati provengono da studi su soggetti in larga maggioranza sani, spesso giovani
 
 ## Licenza
 
-Il codice è liberamente riutilizzabile. I dati sono estratti da pubblicazioni scientifiche: quelle open access sono indicate come CC BY 4.0 in bibliografia, le altre restano soggette al copyright dei rispettivi editori e sono qui riportate come valori numerici con attribuzione.
+© 2026 lorenzo1234551994. Tutti i diritti riservati: codice, testi, note e organizzazione dei contenuti non possono essere copiati, modificati o ridistribuiti senza autorizzazione scritta. Dettagli nel file [LICENSE](LICENSE).
+
+I dati sono estratti da pubblicazioni scientifiche: quelle open access sono indicate come CC BY 4.0 in bibliografia, le altre restano soggette al copyright dei rispettivi editori e sono qui riportate come valori numerici con attribuzione.
